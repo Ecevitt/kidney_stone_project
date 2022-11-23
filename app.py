@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from flask import Flask,render_template,request,jsonify
 import pickle
@@ -30,4 +31,4 @@ def predict():
         return  render_template("stoneswrong.html",prediction_text3 = "Please fill the form with numeric values otherwise calculation cannot be done" )
             
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=False)
+    app.run(debug=True)
