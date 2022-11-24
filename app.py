@@ -24,11 +24,11 @@ def predict():
         if prediction ==1:
                  return render_template("stonespos.html",
                                         prediction_text1 = 
-                                        "Your test results indicate the presence of kidney stones.We recommend that you consult your doctor with your urine test values") 
+                                        "Your test results indicate the presence of kidney stones. We recommend that you consult your doctor with your urine test values.") 
         elif prediction==0:
-                return render_template("stonesneg.html",prediction_text2 = "Your test results indicate the absence of kidney stones.We wish you healthy days" )
+                return render_template("stonesneg.html",prediction_text2 = "Your test results indicate the absence of kidney stones. We wish you healthy days." )
     except ValueError:
-        return  render_template("stoneswrong.html",prediction_text3 = "Please fill the form with numeric values otherwise calculation cannot be done" )
+        return  render_template("stoneswrong.html",prediction_text3 = "Please fill the form with numeric values otherwise calculation cannot be done." )
             
 if __name__ == "__main__":
     app.run(debug=True)
